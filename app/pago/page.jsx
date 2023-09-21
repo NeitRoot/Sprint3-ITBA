@@ -1,13 +1,13 @@
-import React from "react";
-import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import React from "react";
 import SideBar from "@/app/components/Sidebar";
 
 const Pagos = () => {
   return (
     <>
-    <Header/>
-    <SideBar/>
+      <Header />
+      <SideBar />
       <h1 className="flex justify-center my-6 text-4xl">Pagos</h1>
       <section className="relative overflow-x-auto border rounded-md mt-4 mx-auto w-4/5">
         <table className="w-full text-sm text-left text-gray-500">
@@ -64,7 +64,7 @@ const Pagos = () => {
           </tbody>
         </table>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

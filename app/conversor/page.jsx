@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from "react";
-import Header from "@/app/components/Header";
+import React, { useEffect, useState } from "react";
+
 import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import { HiChevronRight } from "react-icons/hi";
 import SideBar from "@/app/components/Sidebar";
 
 const Conversor = () => {
   const [moneda1, setMoneda1] = useState("USD");
   const [moneda2, setMoneda2] = useState("ARS");
   const [listaMonedas, setListaMonedas] = useState([]);
-  const [montoIngresado, setMontoIngresado] = useState(undefined);
+  const [montoIngresado, setMontoIngresado] = useState("");
   const [valorCambio, setValorCambio] = useState(undefined);
   const [valorMoneda1, setValorMoneda1] = useState(undefined);
   const [valorMoneda2, setValorMoneda2] = useState(undefined);
+  const [resultado, setResultado] = useState(false);
 
   useEffect(() => {
     const URL = "https://v6.exchangerate-api.com/v6";
@@ -34,14 +37,15 @@ const Conversor = () => {
           setValorCambio(data.conversion_rate);
           setValorMoneda1(data.base_code);
           setValorMoneda2(data.target_code);
+          setResultado(true);
         });
     }
   }
 
   return (
     <>
-    <Header/>
-    <SideBar/>
+      <Header />
+      <SideBar />
       <section className="flex flex-col items-center">
         <div>
           <h1 className="flex justify-center my-6 text-4xl text-center">
@@ -68,7 +72,9 @@ const Conversor = () => {
               ))}
             </select>
             <div>
-              <span className="cursor-default">➡️</span>
+              <span className="text-xl">
+                <HiChevronRight />
+              </span>
             </div>
             <select
               value={moneda2}
@@ -103,25 +109,25 @@ const Conversor = () => {
             </button>
           </div>
         </form>
-        {montoIngresado === undefined ? (
-          <p className="font-semibold text-md my-2 text-center">
-            Ingrese un valor para realizar la conversión
-          </p>
-        ) : (
+        {resultado === true ? (
           <div className="flex font-semibold m-2 sm:flex-col sm:items-center">
             <span className=" text-red-600 mx-1">
               {montoIngresado} {valorMoneda1}
             </span>
             <div className="flex gap-1 sm:flex-col">
               <p>es equivalente a:</p>
-              <span className="text-green-600">
+              <span className="text-green-600 text-center">
                 {(valorCambio * montoIngresado).toFixed(2)} {valorMoneda2}
               </span>
             </div>
           </div>
+        ) : (
+          <p className="font-semibold text-md my-2 text-center">
+            Ingrese un valor para realizar la conversión
+          </p>
         )}
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

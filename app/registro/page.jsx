@@ -65,7 +65,7 @@ const Registro = () => {
               />
             </div>
 
-            <Link href={'/'}>
+            <Link href={"/"}>
               <button
                 className="w-72 flex justify-center bg-blue-800 hover:bg-blue-700 text-white font-bold mt-4 py-2 px-16 rounded focus:outline-none focus:shadow-outline"
                 type="button"
@@ -74,9 +74,13 @@ const Registro = () => {
               </button>
             </Link>
 
-            <Link href={"https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dchrome-profile-chooser%26pli%3D1&ec=GAlAwAE&hl=es_419&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1056708794%3A1694488282615385&theme=glif"}>
+            <Link
+              href={
+                "https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dchrome-profile-chooser%26pli%3D1&ec=GAlAwAE&hl=es_419&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1056708794%3A1694488282615385&theme=glif"
+              }
+            >
               <button
-                className="w-72 flex justify-center items-center gap-2 bg-black hover:bg-zinc-900 text-white font-bold mt-4 py-2 px-16 rounded focus:outline-none focus:shadow-outline"
+                className="w-72 flex justify-center items-center gap-2 bg-black hover:bg-zinc-900 text-white font-bold mt-4 py-2 px-10 rounded focus:outline-none focus:shadow-outline"
                 type="button"
               >
                 Registrame con

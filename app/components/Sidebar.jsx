@@ -1,5 +1,7 @@
-"use client"
+"use client";
+
 import React, { useState } from "react";
+
 import Link from "next/link";
 
 const SideBar = () => {
@@ -59,34 +61,34 @@ const SideBar = () => {
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
                   Cuenta
                 </div>
-              </Link>  
+              </Link>
               <Link href={"/pago"}>
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
                   Pagos
                 </div>
-              </Link> 
+              </Link>
               <Link href={"/transferencia"}>
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
                   Transferencias
                 </div>
-              </Link> 
+              </Link>
               <Link href={"/prestamos"}>
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
                   Préstamos
                 </div>
-              </Link> 
+              </Link>
               <Link href={"/conversor"}>
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
                   Conversor de moneda
                 </div>
-              </Link> 
+              </Link>
             </div>
             <div className="lg:mt-72 sm:mt-72 md:mt-72">
               <Link href={"/"}>
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
                   Cerrar sesión
                 </div>
-              </Link> 
+              </Link>
             </div>
           </div>
         </div>

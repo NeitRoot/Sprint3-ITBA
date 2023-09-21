@@ -1,10 +1,11 @@
-import React from "react";
 import {
   FaFacebookSquare,
   FaInstagram,
   FaWhatsappSquare,
 } from "react-icons/fa";
+
 import Link from "next/link";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -24,20 +25,20 @@ const Footer = () => {
               </li>
             </ul>
             <div className="text-orange-800 w-screen text-center ">
-              <Link href={'https://www.facebook.com'} target="blank">
-              <button className="m-2 text-3xl">
-                <FaFacebookSquare></FaFacebookSquare>
-              </button>
+              <Link href={"https://www.facebook.com"} target="blank">
+                <button className="m-2 text-3xl">
+                  <FaFacebookSquare></FaFacebookSquare>
+                </button>
               </Link>
-              <Link href={'https://www.instagram.com'} target="blank">
-              <button className="m-2 text-3xl">
-                <FaInstagram></FaInstagram>
-              </button>
+              <Link href={"https://www.instagram.com"} target="blank">
+                <button className="m-2 text-3xl">
+                  <FaInstagram></FaInstagram>
+                </button>
               </Link>
-              <Link href={'https://www.whatsapp.com'} target="blank">
-              <button className="m-2 text-3xl">
-                <FaWhatsappSquare></FaWhatsappSquare>
-              </button>
+              <Link href={"https://www.whatsapp.com"} target="blank">
+                <button className="m-2 text-3xl">
+                  <FaWhatsappSquare></FaWhatsappSquare>
+                </button>
               </Link>
             </div>
           </div>
