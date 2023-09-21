@@ -6,13 +6,17 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    screens: {
+      sm: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      md: { min: "768px", max: "1023px" },
+      // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+      lg: { min: "1024px" },
+      // => @media (min-width: 1024px) { ... }
     },
+    extend: {},
   },
   plugins: [],
 };

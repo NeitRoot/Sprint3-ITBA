@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "@/app/assets/images/logo.png";
 import { FcGoogle } from "react-icons/fc";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "@/app/assets/images/logo.png";
 
 export default function Home() {
   return (
@@ -79,7 +79,7 @@ export default function Home() {
             <div className="mt-4 flex justify-center">
               <p className="text-sm text-gray-700">
                 ¿No tienes una cuenta?{" "}
-                <Link href={'/registo'} className="text-blue-800">
+                <Link href={'/registro'} className="text-blue-800">
                   Registrate
                 </Link>
               </p>
