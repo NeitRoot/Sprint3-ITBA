@@ -79,7 +79,7 @@ export default function Home() {
             <div className="mt-4 flex justify-center">
               <p className="text-sm text-gray-700">
                 ¿No tienes una cuenta?{" "}
-                <Link href={'/registro'} className="text-blue-800">
+                <Link href={"/registro"} className="text-blue-800">
                   Registrate
                 </Link>
               </p>

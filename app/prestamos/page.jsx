@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
-import FormPrestamos from "@/app/components/FormPrestamos";
-import Resultado from "@/app/components/Resultado";
-import Header from "@/app/components/Header";
+
 import Footer from "@/app/components/Footer";
+import FormPrestamos from "@/app/components/FormPrestamos";
+import Header from "@/app/components/Header";
+import Resultado from "@/app/components/Resultado";
 import SideBar from "@/app/components/Sidebar";
 
 const Prestamos = () => {
   const [cantidad, setCantidad] = useState(0);
-  const [plazo, setPlazo] = useState("");
+  const [plazo, setPlazo] = useState("3");
   const [total, setTotal] = useState(0);
 
   return (
     <>
-    <Header/>
-    <SideBar/>
+      <Header />
+      <SideBar />
       <section className="flex flex-col items-center">
         <h1 className="flex justify-center my-6 text-4xl text-center sm:mt-20">
           Simulador de préstamos
@@ -35,7 +36,7 @@ const Prestamos = () => {
           <Resultado total={total} cantidad={cantidad} plazo={plazo} />
         )}
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

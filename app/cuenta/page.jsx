@@ -1,14 +1,14 @@
-import React from "react";
-import data from "@/app/utils/datos.json";
-import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import React from "react";
 import SideBar from "@/app/components/Sidebar";
+import data from "@/app/utils/datos.json";
 
 const Cuentas = () => {
   return (
     <>
-    <Header/>
-    <SideBar/>
+      <Header />
+      <SideBar />
       <div className="flex justify-center items-center gap-6 sm:flex-col">
         <div className="flex justify-center">
           <div className="bg-orange-400 w-96 m-5 rounded-lg text-xl text-orange-900 sm:w-80">
@@ -62,7 +62,7 @@ const Cuentas = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

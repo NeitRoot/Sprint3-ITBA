@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
+
 import { calcularTotal } from "@/app/utils/prestamos";
 
 const Formulario = ({ cantidad, setCantidad, plazo, setPlazo, setTotal }) => {
@@ -15,7 +16,7 @@ const Formulario = ({ cantidad, setCantidad, plazo, setPlazo, setTotal }) => {
     setError(false);
 
     const total = calcularTotal(cantidad, plazo);
-    setTotal(total);
+    setTotal(total);   
   };
 
   return (
