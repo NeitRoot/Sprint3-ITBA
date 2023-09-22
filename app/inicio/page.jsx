@@ -25,11 +25,11 @@ const Inicio = () => {
         </h1>
         <div className="flex justify-center sm:flex-col items-center gap-8 sm:gap-1 mb-10">
           <div className="bg-orange-400 w-80 rounded-md text-xl text-orange-900 my-4 min-h-[8rem]">
-            <h5 className="font-bold ml-2">Cuentas</h5>
-            <p className="text-orange-100 ml-3">{data[0].tipo_de_cuenta}</p>
-            <p className="text-orange-100 ml-5">{data[0].saldo}</p>
+            <h2 className="font-bold ml-2">Cuentas</h2>
+            <p className="text-white ml-3">{data[0].tipo_de_cuenta}</p>
+            <p className="text-white ml-5">{data[0].saldo}</p>
             <Link
-              href={"#"}
+              href={"/cuenta"}
               className="flex justify-center hover:text-white transition-colors"
             >
               Ver todo
@@ -37,14 +37,14 @@ const Inicio = () => {
           </div>
 
           <div className="bg-orange-400 w-80 rounded-md text-xl text-orange-900 my-4 min-h-[8rem]">
-            <h5 className="font-bold ml-2">Tarjetas</h5>
+            <h2 className="font-bold ml-2">Tarjetas</h2>
             <div>
-              <p className="text-orange-100 ml-3">Número de tarjeta</p>
+              <p className="text-white ml-3">Número de tarjeta</p>
               <div className="flex items-center justify-between">
                 {mostrarNum ? (
                   <p className="text-white ml-5">*** *** ***</p>
                 ) : (
-                  <p className="text-orange-100 ml-5">
+                  <p className="text-white ml-5">
                     {data[0].datos_tarjeta.numero_de_tarjeta}
                   </p>
                 )}
@@ -55,7 +55,7 @@ const Inicio = () => {
                     setMostrarNum(!mostrarNum);
                   }}
                 >
-                  <AiOutlineEye className="text-orange-700 hover:text-white transition-colors" />
+                  <AiOutlineEye className="text-orange-700 hover:text-white transition-colors" name="ojito"/>
                 </button>
               </div>
             </div>

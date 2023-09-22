@@ -51,9 +51,9 @@ const Conversor = () => {
           <h1 className="flex justify-center my-6 text-4xl text-center">
             Conversor de moneda
           </h1>
-          <h3 className="flex justify-center my-6 text-2xl text-center">
+          <h2 className="flex justify-center my-6 text-2xl text-center">
             Elegí la moneda e ingresá la cantidad a convertir
-          </h3>
+          </h2>
         </div>
         <form>
           <div className="flex justify-center items-center gap-4 my-2">
@@ -100,10 +100,11 @@ const Conversor = () => {
               placeholder="Ingresar monto"
               required
               min="1"
+              name="montoInput"
             />
             <button
               className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:outline-none  font-semibold rounded-md text-sm w-auto px-5 py-2 "
-              onClick={handleConvert}
+              onClick={handleConvert} name="convertirBoton"
             >
               Convertir
             </button>

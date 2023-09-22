@@ -15,28 +15,28 @@ const Footer = () => {
           <div className="w-80 ">
             <ul className="text-orange-800 text-xl ml-10 sm:mb-5 mt-5">
               <li>
-                <a href="#">|| Términos y condiciones</a>
+                <Link href="#">|| Términos y condiciones</Link>
               </li>
               <li>
-                <a href="#">|| Políticas de privacidad</a>
+                <Link href="#">|| Políticas de privacidad</Link>
               </li>
               <li>
-                <a href="#">|| Contacto</a>
+                <Link href="#">|| Contacto</Link>
               </li>
             </ul>
             <div className="text-orange-800 w-screen text-center ">
-              <Link href={"https://www.facebook.com"} target="blank">
-                <button className="m-2 text-3xl">
+              <Link href={"https://www.facebook.com"} target="blank" name="linkFacebook" >
+                <button className="m-2 text-3xl" name="facebook">
                   <FaFacebookSquare></FaFacebookSquare>
                 </button>
               </Link>
-              <Link href={"https://www.instagram.com"} target="blank">
-                <button className="m-2 text-3xl">
+              <Link href={"https://www.instagram.com"} target="blank" name="linkInstagram">
+                <button className="m-2 text-3xl" name="instagram">
                   <FaInstagram></FaInstagram>
                 </button>
               </Link>
-              <Link href={"https://www.whatsapp.com"} target="blank">
-                <button className="m-2 text-3xl">
+              <Link href={"https://www.whatsapp.com"} target="blank" name="linkWhatsapp">
+                <button className="m-2 text-3xl" name="whatsapp">
                   <FaWhatsappSquare></FaWhatsappSquare>
                 </button>
               </Link>
