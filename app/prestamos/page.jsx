@@ -1,7 +1,5 @@
 "use client";
-
-import React, { useState } from "react";
-
+import { useState } from "react";
 import Footer from "@/app/components/Footer";
 import FormPrestamos from "@/app/components/FormPrestamos";
 import Header from "@/app/components/Header";
