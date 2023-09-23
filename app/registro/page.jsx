@@ -2,7 +2,6 @@ import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/images/logo.png";
-import React from "react";
 
 const Registro = () => {
   return (

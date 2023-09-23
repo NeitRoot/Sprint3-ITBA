@@ -1,8 +1,6 @@
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import React from "react";
 import SideBar from "@/app/components/Sidebar";
-import data from "@/app/utils/datos.json";
 
 const Cuentas = () => {
   return (
@@ -16,19 +14,19 @@ const Cuentas = () => {
             <div className="m-5 mt-0">
               <ul className="text-orange-100 ml-5">
                 <li>
-                  <span className="font-bold"> Titular:</span> {data[0].nombre}
+                  <span className="font-bold"> Titular:</span> NOMBRE
                 </li>
-                <li>{data[0].tipo_de_cuenta}</li>
+                <li>TIPO DE CUENTA</li>
                 <li>
                   {" "}
-                  <span className="font-bold"> Saldo:</span> {data[0].saldo}
+                  <span className="font-bold"> Saldo:</span> SALDO
                 </li>
                 <li>
                   {" "}
-                  <span className="font-bold"> C.B.U:</span> {data[0].cbu}
+                  <span className="font-bold"> C.B.U:</span> CBU
                 </li>
                 <li>
-                  <span className="font-bold"> Alias:</span> {data[0].alias}
+                  <span className="font-bold"> Alias:</span> ALIAS
                 </li>
               </ul>
             </div>
@@ -40,22 +38,20 @@ const Cuentas = () => {
             <h5 className="font-bold ml-3 mt-2">Tarjetas</h5>
             <div className="m-5 mt-0">
               <ul className="text-orange-100 ml-3">
-                <li>{data[0].datos_tarjeta.tipo_de_tarjeta}</li>
+                <li>TIPO DE TARJETA</li>
                 <li>
-                  <span className="font-bold"> N° de tarjeta:</span>{" "}
-                  {data[0].datos_tarjeta.numero_de_tarjeta}
+                  <span className="font-bold"> N° de tarjeta:</span> N° DE
+                  TARJETA
                 </li>
                 <li>
-                  <span className="font-bold"> Titular:</span>{" "}
-                  {data[0].datos_tarjeta.titular}
+                  <span className="font-bold"> Titular:</span> TITULAR
                 </li>
                 <li>
-                  <span className="font-bold"> Vencimiento:</span>{" "}
-                  {data[0].datos_tarjeta.vencimiento}
+                  <span className="font-bold"> Vencimiento:</span> VENCIMIENTO
                 </li>
                 <li>
-                  <span className="font-bold"> Código de seguridad:</span>{" "}
-                  {data[0].datos_tarjeta.codigo_de_seguridad}
+                  <span className="font-bold"> Código de seguridad:</span> COD.
+                  DE SEGURIDAD
                 </li>
               </ul>
             </div>

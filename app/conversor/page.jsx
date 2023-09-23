@@ -1,7 +1,5 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import { HiChevronRight } from "react-icons/hi";

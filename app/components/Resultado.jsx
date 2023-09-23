@@ -1,5 +1,3 @@
-import React from "react";
-
 const Resultado = ({ total, cantidad, plazo }) => {
   return (
     <div className="flex flex-col items-center gap-2 m-4 py-4 px-6 border-blue-600 border-2 rounded-md">

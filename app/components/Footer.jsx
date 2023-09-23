@@ -3,9 +3,7 @@ import {
   FaInstagram,
   FaWhatsappSquare,
 } from "react-icons/fa";
-
 import Link from "next/link";
-import React from "react";
 
 const Footer = () => {
   return (
@@ -25,17 +23,29 @@ const Footer = () => {
               </li>
             </ul>
             <div className="text-orange-800 w-screen text-center ">
-              <Link href={"https://www.facebook.com"} target="blank" name="linkFacebook" >
+              <Link
+                href={"https://www.facebook.com"}
+                target="blank"
+                name="linkFacebook"
+              >
                 <button className="m-2 text-3xl" name="facebook">
                   <FaFacebookSquare></FaFacebookSquare>
                 </button>
               </Link>
-              <Link href={"https://www.instagram.com"} target="blank" name="linkInstagram">
+              <Link
+                href={"https://www.instagram.com"}
+                target="blank"
+                name="linkInstagram"
+              >
                 <button className="m-2 text-3xl" name="instagram">
                   <FaInstagram></FaInstagram>
                 </button>
               </Link>
-              <Link href={"https://www.whatsapp.com"} target="blank" name="linkWhatsapp">
+              <Link
+                href={"https://www.whatsapp.com"}
+                target="blank"
+                name="linkWhatsapp"
+              >
                 <button className="m-2 text-3xl" name="whatsapp">
                   <FaWhatsappSquare></FaWhatsappSquare>
                 </button>
