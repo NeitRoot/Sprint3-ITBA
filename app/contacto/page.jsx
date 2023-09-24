@@ -22,7 +22,7 @@ const Contacto = () => {
                     />
                 </div>
                 <div className="w-[80%] flex border-2 border-yellow-600 rounded">
-                    <div className="flex p-8">
+                    <div className="flex p-8 sm:flex-col">
                         <div className="flex flex-col p-2">
                             <h3 className="font-bold">CENTRO DE ATENCIÓN Y SERVICIOS DEL BANCO ITBANK 0810-2222-2222</h3>
                             <p className="m-2">De lunes a viernes de 8:00 a 22:00.</p>
