@@ -19,7 +19,7 @@ const Footer = () => {
                 <Link href="#">|| Políticas de privacidad</Link>
               </li>
               <li>
-                <Link href="#">|| Contacto</Link>
+                <Link href={"/contacto"}>|| Contacto</Link>
               </li>
             </ul>
             <div className="text-orange-800 w-screen text-center ">
