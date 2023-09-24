@@ -13,10 +13,10 @@ const Footer = () => {
           <div className="w-80 ">
             <ul className="text-orange-800 text-xl ml-10 sm:mb-5 mt-5">
               <li>
-                <Link href="#">|| Términos y condiciones</Link>
+                <Link href={"/terminos"}>|| Términos y condiciones</Link>
               </li>
               <li>
-                <Link href="#">|| Políticas de privacidad</Link>
+                <Link href={"/privacidad"}>|| Políticas de privacidad</Link>
               </li>
               <li>
                 <Link href={"/contacto"}>|| Contacto</Link>
