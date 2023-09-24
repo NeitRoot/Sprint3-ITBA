@@ -14,7 +14,7 @@ const Terminos = () => {
                         TÉRMINOS Y CONDICIONES
                     </h2>
                 </div>
-                <div className="w-[60%] flex flex-col items-center justify-center bg-yellow-200 p-8">
+                <div className="w-[60%] flex flex-col items-center justify-center bg-yellow-200 p-8 md:w-[80%] sm:w-[90%]">
                     <p className="mb-2 font-bold">Vigente desde: 12/07/2023</p>
                     <p>
                         Los términos y condiciones de uso que se describen a continuación
