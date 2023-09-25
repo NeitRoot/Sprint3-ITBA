@@ -2,13 +2,12 @@
 import { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import Banner from "@/app/assets/images/banner.png";
-import BannerA from "@/app/assets/images/bannerA.png";
-import BannerB from "@/app/assets/images/bannerB.png";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import SideBar from "@/app/components/Sidebar";
+import BannerLg from "@/app/assets/images/bannerUnificado.jpg";
 
 const Inicio = () => {
   const [mostrarNum, setMostrarNum] = useState(true);
@@ -60,14 +59,11 @@ const Inicio = () => {
           </div>
         </div>
         <div className="flex justify-center mb-20">
-          <div className="w-80 sm:hidden">
-            <Image src={BannerA} alt="Banner A" priority />
-          </div>
-          <div className="w-80 items-center sm:w-[65%] mb-2 mt-0">
+          <div className="w-80 items-center sm:w-[65%] md:hidden lg:hidden mb-2 mt-0">
             <Image src={Banner} alt="Banner" priority />
           </div>
-          <div className="w-80 sm:hidden">
-            <Image src={BannerB} alt="Banner B" priority />
+          <div className="w-4/5 mx-auto items-center sm:hidden mb-2 mt-0">
+            <Image src={BannerLg} alt="Banner" priority />
           </div>
         </div>
       </section>

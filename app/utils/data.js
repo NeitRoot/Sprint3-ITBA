@@ -1,4 +1,4 @@
-const tarjetas = [
+export const tarjetas = [
   {
     id: 1,
     titular: " Lorena Alix ",
@@ -19,7 +19,7 @@ const tarjetas = [
   },
 ];
 
-const cuentas = [
+export const cuentas = [
   {
     id: 1,
     titular: " Lorena Alix ",
