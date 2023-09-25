@@ -1,4 +1,3 @@
-import React from "react";
 
 const PageCuenta = ({ params }) => {
   const { id } = params;
