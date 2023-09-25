@@ -41,8 +41,7 @@ export default async function Cuenta() {
                   </li>
                 </ul>
               </div>
-              <Link
-                href="cuenta/1">
+              <Link href="cuenta/[id]" as={`cuenta/${cuenta.id}`}>
                 <button className="flex mx-auto text-white">Ver detalle</button>
               </Link>
             </div>
