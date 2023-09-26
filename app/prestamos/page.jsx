@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import Footer from "@/app/components/Footer";
-import FormPrestamos from "@/app/components/FormPrestamos";
 import Header from "@/app/components/Header";
-import Resultado from "@/app/components/Resultado";
 import SideBar from "@/app/components/Sidebar";
+import FormPrestamos from "./FormPrestamos";
+import Resultado from "./Resultado";
 
 const Prestamos = () => {
   const [cantidad, setCantidad] = useState(0);

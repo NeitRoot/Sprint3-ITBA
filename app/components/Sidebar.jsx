@@ -55,9 +55,9 @@ const SideBar = () => {
                   Inicio
                 </div>
               </Link>
-              <Link href={"/cuenta"}>
+              <Link href={"/cuentas"}>
                 <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
-                  Cuenta
+                  Cuentas
                 </div>
               </Link>
               <Link href={"/pago"}>
