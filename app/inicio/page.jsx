@@ -7,14 +7,22 @@ import BannerLg from "@/app/assets/images/bannerUnificado.jpg";
 import Tarjeta from "./Tarjeta";
 import Cuenta from "./Cuenta";
 
-const Inicio = () => {
+const fetchCuentas = () => {
+  return fetch("https://65121923b8c6ce52b39556eb.mockapi.io/cuentas/1").then(
+    (res) => res.json()
+  );
+};
+
+export default async function Inicio() {
+  const cuenta = await fetchCuentas();
+
   return (
     <>
       <Header />
       <SideBar />
       <section>
         <h1 className="flex justify-center font-bold text-4xl text-blue-600 sm:text-2xl mt-6 mb-0">
-          Hola, NOMBRE!
+          Hola, {cuenta.titular}!
         </h1>
         <div className="flex justify-center sm:flex-col items-center gap-8 sm:gap-1 mb-10">
           <Cuenta />
@@ -32,6 +40,4 @@ const Inicio = () => {
       <Footer />
     </>
   );
-};
-
-export default Inicio;
+}

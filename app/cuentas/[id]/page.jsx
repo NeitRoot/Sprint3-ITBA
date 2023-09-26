@@ -16,9 +16,14 @@ export default async function DetalleCuenta({ params }) {
     <>
       <Header />
       <SideBar />
+      <div className="flex flex-col items-center">
       <h1>ID seleccionado: {id}</h1>
-      <p>Nombre: {cuentas.titular}</p>
-      <p>Saldo de cuenta: {cuentas.saldo}</p>
+        <p>Titular: {cuentas.titular}</p>
+        <p>Tipo de cuenta: {cuentas.tipo_cuenta}</p>
+        <p>Saldo de cuenta: {cuentas.saldo}</p>
+        <p>Alias: {cuentas.alias}</p>
+        <p>C.B.U: {cuentas.cbu}</p>
+      </div>
       <Footer />
     </>
   );
