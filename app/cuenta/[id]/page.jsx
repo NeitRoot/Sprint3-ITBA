@@ -1,26 +1,24 @@
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
-import { cuentas } from "@/app/utils/data";
 
-const fetchCuentaSeleccionada = () => {
-  return cuentas;
+const fetchCuentaSeleccionada = (id) => {
+  return fetch(
+    `https://65121923b8c6ce52b39556eb.mockapi.io/cuentas/${id}`
+  ).then((res) => res.json());
 };
-export default async function PageCuenta({ params }) {
+
+export default async function DetalleCuenta({ params }) {
   const { id } = params;
-  const cuenta = await fetchCuentaSeleccionada();
+  const cuentas = await fetchCuentaSeleccionada(id);
+
   return (
     <>
       <Header />
       <SideBar />
       <h1>ID seleccionado: {id}</h1>
-      {cuenta.map((item) => (
-        <div key={item.id}>
-          <p>{item.titular}</p>
-          <p>{item.tipo_cuenta}</p>
-          <p>{item.saldo}</p>
-        </div>
-      ))}
+      <p>Nombre: {cuentas.titular}</p>
+      <p>Saldo de cuenta: {cuentas.saldo}</p>
       <Footer />
     </>
   );

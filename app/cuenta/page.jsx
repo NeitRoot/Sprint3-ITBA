@@ -1,15 +1,18 @@
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
-import { cuentas, tarjetas } from "@/app/utils/data";
 import Link from "next/link";
 
 const fetchCuentas = () => {
-  return cuentas;
+  return fetch("https://65121923b8c6ce52b39556eb.mockapi.io/cuentas").then(
+    (res) => res.json()
+  );
 };
 
 const fetchTarjetas = () => {
-  return tarjetas;
+  return fetch("https://65121923b8c6ce52b39556eb.mockapi.io/tarjetas").then(
+    (res) => res.json()
+  );
 };
 
 export default async function Cuenta() {
@@ -41,7 +44,7 @@ export default async function Cuenta() {
                   </li>
                 </ul>
               </div>
-              <Link href="cuenta/[id]" as={`cuenta/${cuenta.id}`}>
+              <Link href={`cuenta/${cuenta.id}`}>
                 <button className="flex mx-auto text-white">Ver detalle</button>
               </Link>
             </div>
