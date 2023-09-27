@@ -6,7 +6,7 @@ const SideBar = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="py-3 fixed top-0 left-0 right-0 text-blue-900 z-10">
-      <button className="ml-8 mt-3" onClick={() => setOpen(true)} name="ham">
+      <button className="ml-8 mt-3" onClick={() => setOpen(true)} name="menu-hamburguesa">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

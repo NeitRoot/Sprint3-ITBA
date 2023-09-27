@@ -26,7 +26,7 @@ const Footer = () => {
               <Link
                 href={"https://www.facebook.com"}
                 target="blank"
-                name="linkFacebook"
+                name="link Facebook"
               >
                 <button className="m-2 text-3xl" name="facebook">
                   <FaFacebookSquare></FaFacebookSquare>
@@ -35,7 +35,7 @@ const Footer = () => {
               <Link
                 href={"https://www.instagram.com"}
                 target="blank"
-                name="linkInstagram"
+                name="link Instagram"
               >
                 <button className="m-2 text-3xl" name="instagram">
                   <FaInstagram></FaInstagram>
@@ -44,7 +44,7 @@ const Footer = () => {
               <Link
                 href={"https://www.whatsapp.com"}
                 target="blank"
-                name="linkWhatsapp"
+                name="link Whatsapp"
               >
                 <button className="m-2 text-3xl" name="whatsapp">
                   <FaWhatsappSquare></FaWhatsappSquare>

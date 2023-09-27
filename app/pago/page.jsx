@@ -19,7 +19,7 @@ const Pagos = () => {
       <Header />
       <SideBar />
       <h1 className="flex justify-center my-6 text-4xl">Pagos</h1>
-      <div className="flex justify-center my-6 text-1xl">
+      <div className="flex justify-center my-6 text-xl">
         <button className="bg-orange-400 p-4 rounded-2xl text-white">
           Realizar un pago
         </button>
