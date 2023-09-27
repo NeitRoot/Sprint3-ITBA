@@ -2,19 +2,19 @@
 import { useState, useEffect } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 
-export default function NumeroTarjeta() {
+export default function InfoTarjeta() {
   const [mostrarNum, setMostrarNum] = useState(true);
   const [numeroTarjeta, setNumeroTarjeta] = useState("");
 
   useEffect(() => {
-    fetch("https://65121923b8c6ce52b39556eb.mockapi.io/tarjetas/1")
+    fetch("https://651449b58e505cebc2eb14a2.mockapi.io/tarjetas/1")
       .then((res) => res.json())
       .then((data) => setNumeroTarjeta(data));
   }, [numeroTarjeta]);
 
   return (
     <>
-      <div className="p-2">
+      <div className="py-3 px-2 items-center gap-x-6">
         <p className="text-lg text-white">
           {numeroTarjeta.tipo_tarjeta} - {numeroTarjeta.titular}
         </p>
@@ -34,9 +34,6 @@ export default function NumeroTarjeta() {
               name="Mostrar/Ocultar numeros"
             />
           </span>
-        </div>
-        <div className="flex text-xs text-white">
-          <p>Venc. {numeroTarjeta.fecha_expiracion}</p>
         </div>
       </div>
     </>

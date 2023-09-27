@@ -3,9 +3,11 @@ import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 
 const fetchCuentaSeleccionada = (id) => {
-  return fetch(
-    `https://65121923b8c6ce52b39556eb.mockapi.io/cuentas/${id}`
-  ).then((res) => res.json());
+  return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas/${id}`, {
+    next: {
+      revalidate: 1,
+    },
+  }).then((res) => res.json());
 };
 
 export default async function DetalleCuenta({ params }) {
@@ -17,9 +19,10 @@ export default async function DetalleCuenta({ params }) {
       <Header />
       <SideBar />
       <div className="flex flex-col items-center">
-      <h1>ID seleccionado: {id}</h1>
+        <h1>ID seleccionado: {id}</h1>
         <p>Titular: {cuentas.titular}</p>
         <p>Tipo de cuenta: {cuentas.tipo_cuenta}</p>
+        <p>N° de cuenta: {cuentas.numero_cuenta}</p>
         <p>Saldo de cuenta: {cuentas.saldo}</p>
         <p>Alias: {cuentas.alias}</p>
         <p>C.B.U: {cuentas.cbu}</p>
