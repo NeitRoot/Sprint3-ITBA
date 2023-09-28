@@ -9,7 +9,7 @@ const Transferencias = () => {
       <Header />
       <SideBar />
       <h1 className="flex justify-center my-6 text-4xl">Transferencias</h1>
-      <div className="flex justify-center my-6 text-1xl">
+      <div className="flex justify-center my-6 text-xl">
         <Link href="/transferir" >
           <button className="bg-orange-400 p-4 rounded-2xl text-white">Realizar una transferencia</button>
         </Link>  

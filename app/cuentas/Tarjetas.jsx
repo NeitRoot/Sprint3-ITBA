@@ -1,39 +1,65 @@
+import Image from "next/image";
+import { RiVisaFill, RiMastercardFill } from "react-icons/ri";
+import { CiMenuKebab } from "react-icons/ci";
+import { AiOutlineEye } from "react-icons/ai";
+import Logo from "@/app/assets/images/logo-removebg.png";
+
 const fetchTarjetas = () => {
-  return fetch("https://65121923b8c6ce52b39556eb.mockapi.io/tarjetas").then(
-    (res) => res.json()
-  );
+  return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/tarjetas`, {
+    next: {
+      revalidate: 60,
+    },
+  }).then((res) => res.json());
 };
 
 export default async function Tarjetas() {
   const tarjetas = await fetchTarjetas();
 
   return (
-    <div className="flex justify-center gap-4">
+    <div className="flex gap-8">
       {tarjetas.map((tarjeta) => (
         <div
           key={tarjeta.id}
-          className="bg-orange-400 w-full rounded-lg text-xl text-orange-900 sm:w-80"
+          className={
+            tarjeta.id == 1
+              ? "bg-orange-500 rounded-lg text-white w-96 h-48 hover:scale-105 transition-all shadow-md shadow-slate-500 hover:border-slate-700 hover:border-l-4"
+              : "bg-slate-700 rounded-lg text-white w-96 h-48 hover:scale-105 transition-all shadow-md shadow-slate-500 hover:border-orange-400 hover:border-l-4"
+          }
         >
-          <h5 className="font-bold ml-3 mt-2">Tarjetas</h5>
-          <div className="m-5 mt-0">
-            <ul className="text-orange-100 ml-3">
-              <li>{tarjeta.tipo_tarjeta}</li>
-              <li>
-                <span className="font-bold"> N° de tarjeta:</span>{" "}
-                {tarjeta.numero}
-              </li>
-              <li>
-                <span className="font-bold"> Titular:</span> {tarjeta.titular}
-              </li>
-              <li>
-                <span className="font-bold"> Vencimiento:</span>{" "}
-                {tarjeta.fecha_expiracion}
-              </li>
-              <li>
-                <span className="font-bold"> Código de seguridad:</span>{" "}
-                {tarjeta.cvv}
-              </li>
-            </ul>
+          <div className="flex items-center justify-between px-3">
+            <Image
+              src={Logo}
+              alt="Logo Itbank - Tarjetas"
+              className="w-20 pt-1"
+            />
+            <CiMenuKebab
+              className={
+                tarjeta.id == 1
+                  ? "cursor-pointer hover:text-slate-700 transition-colors text-xl"
+                  : "cursor-pointer hover:text-orange-400 transition-colors text-xl"
+              }
+            />
+          </div>
+          <div className="flex items-center justify-between px-3 ">
+            <p className="text-2xl tracking-widest">{tarjeta.numero}</p>
+            <AiOutlineEye
+              className={
+                tarjeta.id == 1
+                  ? "text-xl hover:text-slate-700 cursor-pointer"
+                  : "text-xl hover:text-orange-400 cursor-pointer"
+              }
+            />
+          </div>
+          <div className="text-sm p-3">
+            <span className="text-xs">Desde</span> {tarjeta.creacion}{" "}
+            <span className="text-xs">Hasta</span> {tarjeta.vencimiento}
+          </div>
+          <div className="flex justify-between items-center text-lg px-3 tracking-widest uppercase">
+            {tarjeta.titular}
+            <div className="flex items-center gap-2 px-4 text-base">
+              {tarjeta.id != 2 ? <RiVisaFill /> : <RiMastercardFill />}
+              {tarjeta.tipo_tarjeta}
+            </div>
           </div>
         </div>
       ))}

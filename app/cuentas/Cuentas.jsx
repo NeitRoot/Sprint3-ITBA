@@ -1,47 +1,51 @@
 import Link from "next/link";
 
 const fetchCuentas = () => {
-  return fetch("https://65121923b8c6ce52b39556eb.mockapi.io/cuentas").then(
-    (res) => res.json()
-  );
+  return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas`, {
+    next: {
+      revalidate: 60,
+    },
+  }).then((res) => res.json());
 };
 
 export default async function Cuentas() {
   const cuentas = await fetchCuentas();
   return (
-    <div className="flex justify-center">
+    <div className="flex gap-14">
       {cuentas.map((cuenta) => (
         <div
           key={cuenta.id}
-          className="bg-orange-400 w-96 m-5 rounded-lg text-xl sm:w-80"
+          className={
+            cuenta.id == 1
+              ? "bg-slate-50 border-l-4 border-y-4 border-y-slate-50 border-orange-400 shadow-md shadow-slate-700 w-96 rounded-md text-xl p-3 sm:w-80 transition-all hover:border-orange-400 hover:border-4"
+              : "bg-slate-50 border-l-4 border-y-4 border-y-slate-50 border-slate-700 shadow-md shadow-slate-700 w-96 rounded-md text-xl p-3 sm:w-80 transition-all hover:border-slate-700 hover:border-4"
+          }
         >
-          <h5 className="font-bold ml-3 mt-2 text-orange-900">Cuenta</h5>
-          <div className="m-5 mt-0">
+          <h5 className="text-black font-bold text-center text-lg uppercase">
+            Caja ahorro - {cuenta.tipo_cuenta}
+          </h5>
+          <div className="py-4 px-2">
             <ul>
               <li>
-                <p className="text-white">
-                  <span className="font-bold">Nombre:</span> {cuenta.titular}
+                <p className="text-slate-800">
+                  <span className="font-bold">N° de cuenta:</span>{" "}
+                  {cuenta.numero_cuenta}
                 </p>
               </li>
               <li>
-                <p className="text-white">
-                  <span className="font-bold">Cuenta:</span>{" "}
-                  {cuenta.tipo_cuenta}
-                </p>
-              </li>
-              <li>
-                <p className="text-white">
+                <p className="text-slate-800">
                   <span className="font-bold">Saldo: </span>$ {cuenta.saldo}
                 </p>
               </li>
             </ul>
           </div>
-          <Link
-            href={`cuentas/${cuenta.id}`}
-            className="text-white flex justify-center"
-          >
-            Ver detalle de cuenta
-          </Link>
+          <div className="text-center">
+            <Link href={`/cuentas/${cuenta.id}`}>
+              <button className="hover:text-orange-400 transition-colors bg-slate-50 text-black py-1 px-2 rounded my-1 text-lg font-semibold">
+                Ver detalle de la cuenta
+              </button>
+            </Link>
+          </div>
         </div>
       ))}
     </div>

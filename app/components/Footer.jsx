@@ -1,56 +1,59 @@
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaWhatsappSquare,
-} from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaGripLinesVertical } from "react-icons/fa";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <footer className="w-screen fixed bottom-0">
-        <div className="bg-gradient-to-t from-orange-400  h-50 w-screen mt-20">
-          <div className="w-80 ">
-            <ul className="text-orange-800 text-xl ml-10 sm:mb-5 mt-5">
-              <li>
-                <Link href={"/terminos"}>|| Términos y condiciones</Link>
-              </li>
-              <li>
-                <Link href={"/privacidad"}>|| Políticas de privacidad</Link>
-              </li>
-              <li>
-                <Link href={"/contacto"}>|| Contacto</Link>
-              </li>
-            </ul>
-            <div className="text-orange-800 w-screen text-center ">
-              <Link
-                href={"https://www.facebook.com"}
-                target="blank"
-                name="linkFacebook"
-              >
-                <button className="m-2 text-3xl" name="facebook">
-                  <FaFacebookSquare></FaFacebookSquare>
-                </button>
-              </Link>
-              <Link
-                href={"https://www.instagram.com"}
-                target="blank"
-                name="linkInstagram"
-              >
-                <button className="m-2 text-3xl" name="instagram">
-                  <FaInstagram></FaInstagram>
-                </button>
-              </Link>
-              <Link
-                href={"https://www.whatsapp.com"}
-                target="blank"
-                name="linkWhatsapp"
-              >
-                <button className="m-2 text-3xl" name="whatsapp">
-                  <FaWhatsappSquare></FaWhatsappSquare>
-                </button>
-              </Link>
-            </div>
+      <footer className="w-screen absolute bottom-0 h-32 bg-primary-blue">
+        <div className="flex justify-around items-center pt-5">
+          <div className="text-white text-xl uppercase">
+            <Link
+              href={"/terminos"}
+              className="flex gap-2 items-center transition-colors hover:text-orange-400 font-semibold"
+            >
+              <FaGripLinesVertical /> Términos y condiciones
+            </Link>
+
+            <Link
+              href={"/privacidad"}
+              className="flex gap-2 items-center transition-colors hover:text-orange-400 font-semibold"
+            >
+              <FaGripLinesVertical /> Políticas de privacidad
+            </Link>
+
+            <Link
+              href={"/contacto"}
+              className="flex gap-2 items-center transition-colors hover:text-orange-400 font-semibold"
+            >
+              <FaGripLinesVertical /> Contacto
+            </Link>
+          </div>
+          <div className="text-white flex gap-4 text-4xl">
+            <Link
+              href={"https://www.facebook.com"}
+              target="blank"
+              name="Facebook"
+              className="hover:text-orange-400 transition-colors"
+            >
+              <FaFacebookSquare />
+            </Link>
+            <Link
+              href={"https://www.instagram.com"}
+              target="blank"
+              name="Instagram"
+              className="hover:text-orange-400 transition-colors"
+            >
+              <FaInstagram />
+            </Link>
+            <Link
+              href={"https://www.whatsapp.com"}
+              target="blank"
+              name="Whatsapp"
+              className="hover:text-orange-400 transition-colors"
+            >
+              <FaWhatsapp />
+            </Link>
           </div>
         </div>
       </footer>

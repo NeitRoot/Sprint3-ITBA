@@ -16,7 +16,13 @@ module.exports = {
       lg: { min: "1024px" },
       // => @media (min-width: 1024px) { ... }
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          blue: "#427cae",
+        },
+      },
+    },
   },
   plugins: [],
 };
