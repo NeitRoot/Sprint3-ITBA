@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Logo from "@/app/assets/images/logo.png";
+import Logo from "@/app/assets/images/logo-removebg.png";
 
 const Header = () => {
   return (
     <>
-      <nav className="bg-gradient-to-b from-orange-400 w-screen fixed top-0">
+      <nav className="bg-primary-blue w-screen fixed top-0 shadow-sm shadow-slate-700">
         <div className="w-24 h-20 ml-24">
           <Image src={Logo} alt="LOGO ITBANK" />
         </div>

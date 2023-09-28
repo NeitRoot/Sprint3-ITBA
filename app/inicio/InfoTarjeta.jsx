@@ -14,15 +14,15 @@ export default function InfoTarjeta() {
 
   return (
     <>
-      <div className="py-3 px-2 items-center gap-x-6">
-        <p className="text-lg text-white">
+      <div className="py-3 px-3 items-center gap-x-6">
+        <p className="text-lg text-black uppercase">
           {numeroTarjeta.tipo_tarjeta} - {numeroTarjeta.titular}
         </p>
         <div className="flex items-center justify-between">
           {mostrarNum ? (
-            <p className="text-white text-sm">**** **** **** ****</p>
+            <p className="text-slate-700 text-sm">**** **** **** ****</p>
           ) : (
-            <p className="text-white text-sm">{numeroTarjeta.numero}</p>
+            <p className="text-slate-700 text-sm">{numeroTarjeta.numero}</p>
           )}
           <span
             onClick={() => {
@@ -30,7 +30,7 @@ export default function InfoTarjeta() {
             }}
           >
             <AiOutlineEye
-              className="text-white hover:text-orange-400 transition-colors text-xl cursor-pointer"
+              className="text-slate-700 hover:text-orange-400 transition-colors text-xl cursor-pointer"
               name="Mostrar/Ocultar numeros"
             />
           </span>

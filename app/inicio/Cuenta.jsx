@@ -15,19 +15,19 @@ export default async function Cuenta() {
     <>
       <div
         key={cuentas.id}
-        className="bg-primary-blue w-80 rounded-md my-4 min-h-[10rem] border-l-4 border-orange-400 shadow-md shadow-primary-blue"
+        className="bg-slate-50 w-80 rounded-md my-4 min-h-[10rem] border-l-4 border-orange-400 shadow-md shadow-slate-700"
       >
-        <h2 className="text-white font-bold text-center text-lg uppercase pt-2">
+        <h2 className="text-black font-bold text-center text-lg uppercase pt-2">
           Caja de ahorro - {cuentas.tipo_cuenta}
         </h2>
         <div className="flex py-5 px-2 items-center">
-          <p className="text-white text-3xl font-medium mx-auto">
+          <p className="text-slate-800 text-3xl font-medium mx-auto">
             $ {cuentas.saldo}
           </p>
         </div>
         <div className="text-center">
           <Link href={"/cuentas"}>
-            <button className="hover:text-orange-400 hover:bg-primary-blue transition-colors bg-primary-blue text-white py-1 px-2 rounded my-1 text-lg font-semibold">
+            <button className="hover:text-orange-400 transition-colors bg-slate-50 text-black py-1 px-2 rounded my-1 text-lg font-semibold">
               Ver más cuentas
             </button>
           </Link>

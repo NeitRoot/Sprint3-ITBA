@@ -11,29 +11,29 @@ const fetchCuentas = () => {
 export default async function Cuentas() {
   const cuentas = await fetchCuentas();
   return (
-    <div className="flex justify-center gap-10">
+    <div className="flex gap-14">
       {cuentas.map((cuenta) => (
         <div
           key={cuenta.id}
           className={
             cuenta.id == 1
-              ? "bg-primary-blue border-l-4 border-orange-400 shadow-md shadow-primary-blue w-96 rounded-md text-xl p-3 sm:w-80 hover:scale-105 transition-all"
-              : "bg-primary-blue border-l-4 border-slate-700 shadow-md shadow-primary-blue w-96 rounded-md text-xl p-3 sm:w-80 hover:scale-105 transition-all"
+              ? "bg-slate-50 border-l-4 border-y-4 border-y-slate-50 border-orange-400 shadow-md shadow-slate-700 w-96 rounded-md text-xl p-3 sm:w-80 transition-all hover:border-orange-400 hover:border-4"
+              : "bg-slate-50 border-l-4 border-y-4 border-y-slate-50 border-slate-700 shadow-md shadow-slate-700 w-96 rounded-md text-xl p-3 sm:w-80 transition-all hover:border-slate-700 hover:border-4"
           }
         >
-          <h5 className="text-white font-bold text-center text-lg uppercase">
+          <h5 className="text-black font-bold text-center text-lg uppercase">
             Caja ahorro - {cuenta.tipo_cuenta}
           </h5>
           <div className="py-4 px-2">
             <ul>
               <li>
-                <p className="text-white">
+                <p className="text-slate-800">
                   <span className="font-bold">N° de cuenta:</span>{" "}
                   {cuenta.numero_cuenta}
                 </p>
               </li>
               <li>
-                <p className="text-white">
+                <p className="text-slate-800">
                   <span className="font-bold">Saldo: </span>$ {cuenta.saldo}
                 </p>
               </li>
@@ -41,7 +41,7 @@ export default async function Cuentas() {
           </div>
           <div className="text-center">
             <Link href={`/cuentas/${cuenta.id}`}>
-              <button className="hover:text-orange-400 hover:bg-primary-blue transition-colors bg-primary-blue text-white py-1 px-2 rounded my-1 text-lg font-semibold">
+              <button className="hover:text-orange-400 transition-colors bg-slate-50 text-black py-1 px-2 rounded my-1 text-lg font-semibold">
                 Ver detalle de la cuenta
               </button>
             </Link>

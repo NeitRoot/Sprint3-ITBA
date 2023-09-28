@@ -9,7 +9,7 @@ export default async function Cuenta() {
     <>
       <Header />
       <SideBar />
-      <div className="flex flex-col justify-center items-center gap-6">
+      <div className="flex flex-col items-center gap-10 mx-auto w-full">
         <h1 className="text-center text-2xl font-semibold uppercase">
           Tus cuentas
         </h1>
