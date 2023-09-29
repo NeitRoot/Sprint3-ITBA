@@ -10,7 +10,7 @@ export default function InfoTarjeta() {
     fetch("https://651449b58e505cebc2eb14a2.mockapi.io/tarjetas/1")
       .then((res) => res.json())
       .then((data) => setNumeroTarjeta(data));
-  }, [numeroTarjeta]);
+  }, []);
 
   return (
     <>

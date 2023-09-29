@@ -1,15 +1,13 @@
-import Banner from "@/app/assets/images/banner.png";
-import BannerLg from "@/app/assets/images/bannerUnificado.jpg";
+import Link from "next/link";
+import dynamic from "next/dynamic";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
-import Image from "next/image";
-import Link from "next/link";
+import Cuenta from "./Cuenta";
+import Tarjeta from "./Tarjeta";
 import { BiTransferAlt } from "react-icons/bi";
 import { BsCalculator, BsCurrencyExchange } from "react-icons/bs";
 import { GiPayMoney } from "react-icons/gi";
-import Cuenta from "./Cuenta";
-import Tarjeta from "./Tarjeta";
 
 const fetchCuentas = () => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas/1`, {
@@ -18,6 +16,7 @@ const fetchCuentas = () => {
     },
   }).then((res) => res.json());
 };
+const Banners = dynamic(() => import("@/app/inicio/Banners"));
 
 export default async function Inicio() {
   const cuenta = await fetchCuentas();
@@ -60,14 +59,7 @@ export default async function Inicio() {
             <BsCurrencyExchange /> Conversor
           </Link>
         </div>
-        <div className="flex justify-center py-5">
-          <div className="w-80 items-center sm:w-[65%] md:hidden lg:hidden">
-            <Image src={Banner} alt="Banner" priority />
-          </div>
-          <div className="w-4/5 mx-auto items-center sm:hidden">
-            <Image src={BannerLg} alt="Banner" priority />
-          </div>
-        </div>
+        <Banners />
       </section>
       <Footer />
     </>
