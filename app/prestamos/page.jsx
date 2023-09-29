@@ -15,7 +15,7 @@ const Prestamos = () => {
     <>
       <Header />
       <SideBar />
-      <section className="flex flex-col items-center">
+      <section className="min-h-[calc(100vh-208px)] flex flex-col items-center">
         <h1 className="flex justify-center my-6 text-4xl text-center sm:mt-20">
           Simulador de préstamos
         </h1>

@@ -12,7 +12,7 @@ const Pagos = () => {
     <>
       <Header />
       <SideBar />
-      <div className="relative">
+      <section className="relative min-h-[calc(100vh-232px)]">
         <h1 className="flex justify-center my-6 text-4xl">Pagos</h1>
         <div className=" flex justify-center my-6 text-xl">
           <p
@@ -23,7 +23,7 @@ const Pagos = () => {
           </p>
           {show ? <Pagar /> : null}
         </div>
-        <section className=" overflow-x-auto border rounded-md mt-4 mx-auto w-4/5">
+        <div className=" overflow-x-auto border rounded-md mt-4 mx-auto w-4/5 mb-4">
           <table className="w-full text-sm text-left text-gray-500">
             {/* Titulos */}
             <thead className="text-xs text-gray-700 uppercase">
@@ -91,8 +91,8 @@ const Pagos = () => {
               </tr>
             </tbody>
           </table>
-        </section>
-      </div>
+        </div>
+      </section>
       <Footer />
     </>
   );

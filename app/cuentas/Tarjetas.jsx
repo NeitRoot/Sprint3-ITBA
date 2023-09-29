@@ -16,7 +16,7 @@ export default async function Tarjetas() {
   const tarjetas = await fetchTarjetas();
 
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 my-4">
       {tarjetas.map((tarjeta) => (
         <div
           key={tarjeta.id}

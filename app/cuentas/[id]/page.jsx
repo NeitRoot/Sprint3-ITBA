@@ -20,8 +20,8 @@ export default async function DetalleCuenta({ params }) {
     <>
       <Header />
       <SideBar />
-      <section className="min-h-full">
-        <div className="flex flex-col mx-auto w-2/4 bg-slate-50 p-4 rounded-md border-l-4 border-orange-400 shadow-lg cursor-default">
+      <section className="min-h-[calc(100vh-208px)] flex items-center">
+        <div className="flex flex-col mx-auto w-3/4 bg-slate-50 p-4 rounded-md border-l-4 border-orange-400 shadow-lg cursor-default">
           <div className="flex justify-between">
             <Link
               href="/cuentas"
