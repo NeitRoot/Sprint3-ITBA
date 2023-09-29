@@ -1,12 +1,26 @@
 "use client";
+import { useState } from "react";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 import Pagar from "./Pagar";
-import { useState } from "react";
 
 const Pagos = () => {
   const [show, setShow] = useState(false);
+  const [datosEmpresa, setDatosEmpresa] = useState("");
+  const [datosFactura, setDatosFactura] = useState("");
+  const [datosMonto, setDatosMonto] = useState("");
+
+  // Funciones para capturar inputs del form
+  const empresa = (datoEmpresa) => {
+    setDatosEmpresa(datoEmpresa);
+  };
+  const factura = (datoFactura) => {
+    setDatosFactura(datoFactura);
+  };
+  const monto = (datoMonto) => {
+    setDatosMonto(datoMonto);
+  };
 
   return (
     <>
@@ -14,14 +28,23 @@ const Pagos = () => {
       <SideBar />
       <section className="relative min-h-[calc(100vh-232px)]">
         <h1 className="flex justify-center my-6 text-4xl">Pagos</h1>
+        <div className="text-center">
+          Aca aparecen los datos:
+          <p> Empresa: {datosEmpresa}</p>
+          <p> Factura: {datosFactura}</p>
+          <p> Monto: {datosMonto}</p>
+        </div>
         <div className=" flex justify-center my-6 text-xl">
-          <p
-            className="relative bg-orange-400 p-4 rounded-2xl text-white"
+          <button
+            className="relative bg-orange-400 p-4 rounded-2xl text-white hover:bg-primary-blue transition-colors"
             onClick={() => setShow(!show)}
+            name="Realizar pago"
           >
             Realizar un pago
-          </p>
-          {show ? <Pagar /> : null}
+          </button>
+          {show ? (
+            <Pagar empresa={empresa} factura={factura} monto={monto} />
+          ) : null}
         </div>
         <div className=" overflow-x-auto border rounded-md mt-4 mx-auto w-4/5 mb-4">
           <table className="w-full text-sm text-left text-gray-500">
