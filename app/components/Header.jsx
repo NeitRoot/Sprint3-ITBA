@@ -4,9 +4,9 @@ import Logo from "@/app/assets/images/logo-removebg.png";
 const Header = () => {
   return (
     <>
-      <nav className="bg-primary-blue sticky top-0 shadow-sm shadow-slate-700 z-10">
+      <nav className="bg-primary-blue shadow-sm shadow-slate-700 z-10">
         <div className="w-24 h-20 ml-24">
-          <Image src={Logo} alt="LOGO ITBANK" />
+          <Image src={Logo} alt="LOGO ITBANK" priority={true}/>
         </div>
       </nav>
     </>
