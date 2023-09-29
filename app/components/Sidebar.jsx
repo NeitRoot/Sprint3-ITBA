@@ -6,6 +6,7 @@ import Logo from "@/app/assets/images/logo-removebg.png";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="py-3 fixed top-0 left-0 right-0 text-blue-900 z-10">
       <button
@@ -28,7 +29,6 @@ const SideBar = () => {
           />
         </svg>
       </button>
-
       <div
         className={`${
           open ? "w-80" : "w-0"
@@ -57,47 +57,50 @@ const SideBar = () => {
             </button>
             <Image src={Logo} alt="Logo ITBANK" className="w-24" />
           </div>
-          <div className="py-6">
-            <div>
-              <Link href={"/inicio"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3">
-                  Inicio
-                </div>
-              </Link>
-              <Link href={"/cuentas"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3">
-                  Cuentas
-                </div>
-              </Link>
-              <Link href={"/pago"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3">
-                  Pagos
-                </div>
-              </Link>
-              <Link href={"/transferencia"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3">
-                  Transferencias
-                </div>
-              </Link>
-              <Link href={"/prestamos"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
-                  Préstamos
-                </div>
-              </Link>
-              <Link href={"/conversor"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
-                  Conversor de moneda
-                </div>
-              </Link>
-            </div>
-            <div className="lg:mt-72 sm:mt-72 md:mt-72">
-              <Link href={"/"}>
-                <div className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mb-2">
-                  Cerrar sesión
-                </div>
-              </Link>
-            </div>
+          <div className="py-8 flex flex-col mb-10">
+            <Link
+              href={"/inicio"}
+              className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+            >
+              Inicio
+            </Link>
+            <Link
+              href={"/cuentas"}
+              className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+            >
+              Cuentas
+            </Link>
+            <Link
+              href={"/pago"}
+              className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+            >
+              Pagos
+            </Link>
+            <Link
+              href={"/transferencia"}
+              className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+            >
+              Transferencias
+            </Link>
+            <Link
+              href={"/prestamos"}
+              className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+            >
+              Préstamos
+            </Link>
+            <Link
+              href={"/conversor"}
+              className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+            >
+              Conversor de moneda
+            </Link>
           </div>
+          <Link
+            href={"/"}
+            className="text-center text-white text-xl hover:bg-orange-400 transition-colors cursor-pointer py-3 mx-auto flex justify-center w-full"
+          >
+            Cerrar sesión
+          </Link>
         </div>
       </div>
     </div>

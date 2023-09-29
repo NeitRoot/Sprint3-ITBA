@@ -26,8 +26,8 @@ export default async function Inicio() {
     <>
       <Header />
       <SideBar />
-      <section>
-        <h1 className="flex justify-center font-semibold text-4xl text-primary-blue sm:text-2xl mt-6 mb-0">
+      <section className="min-h-[calc(100vh-232px)]">
+        <h1 className="flex justify-center font-semibold text-4xl text-primary-blue sm:text-2xl mt-6">
           Hola, {cuenta.titular}!
         </h1>
         <div className="flex justify-center sm:flex-col items-center gap-12 sm:gap-1">

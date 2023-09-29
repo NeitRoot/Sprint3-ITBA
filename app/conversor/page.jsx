@@ -8,7 +8,7 @@ const Conversor = () => {
     <>
       <Header />
       <SideBar />
-      <section className="flex flex-col items-center">
+      <section className="min-h-[calc(100vh-208px)] flex flex-col items-center">
         <div>
           <h1 className="flex justify-center my-6 text-4xl text-center">
             Conversor de moneda
