@@ -33,7 +33,7 @@ export default async function Inicio() {
           <Cuenta />
           <Tarjeta />
         </div>
-        <div className="flex justify-center gap-6 my-4">
+        <div className="flex justify-center gap-6 my-4 sm:flex-wrap">
           <Link
             href="/pago"
             className="flex items-center gap-2 bg-slate-100 px-2 py-3 rounded-md shadow-md shadow-slate-700 transition-colors hover:text-white hover:bg-primary-blue"

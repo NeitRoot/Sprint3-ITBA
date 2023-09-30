@@ -11,7 +11,7 @@ const fetchCuentas = () => {
 export default async function Cuentas() {
   const cuentas = await fetchCuentas();
   return (
-    <div className="flex gap-14">
+    <div className="flex gap-14 md:flex-wrap md:justify-center sm:flex-wrap sm:justify-center">
       {cuentas.map((cuenta) => (
         <div
           key={cuenta.id}

@@ -21,7 +21,7 @@ export default async function DetalleCuenta({ params }) {
       <Header />
       <SideBar />
       <section className="min-h-[calc(100vh-208px)] flex items-center">
-        <div className="flex flex-col mx-auto w-3/4 bg-slate-50 p-4 rounded-md border-l-4 border-orange-400 shadow-lg cursor-default">
+        <div className="flex flex-col mx-auto w-3/4 bg-slate-50 p-4 rounded-md border-l-4 border-orange-400 shadow-lg cursor-default sm:mt-3 sm:mb-3">
           <div className="flex justify-between">
             <Link
               href="/cuentas"
@@ -41,7 +41,7 @@ export default async function DetalleCuenta({ params }) {
             <p className="text-3xl py-3">$ {cuentas.saldo}</p>
             <p className="text-base">N° de cuenta: {cuentas.numero_cuenta}</p>
           </div>
-          <div className="flex justify-between px-4 pt-6">
+          <div className="flex justify-between px-4 pt-6 sm:flex-col">
             <p className="flex flex-col items-center text-slate-700">
               Titular:{" "}
               <span className="text-black font-semibold">

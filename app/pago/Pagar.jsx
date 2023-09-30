@@ -21,7 +21,7 @@ const Pagar = ({ empresa, factura, monto }) => {
       {show ? (
         <section className="absolute top-0 left-0 bottom-0 right-0 mx-auto">
           <div className="w-[100%] flex flex-col items-center justify-center sm:w-full">
-            <form className="relative flex flex-col items-center bg-white shadow-md rounded p-8 mx-auto sm:w-[95%]">
+            <form className="relative flex flex-col items-center bg-white shadow-md rounded p-8 mx-auto sm:w-[85%]">
               <AiOutlineClose
                 onClick={() => setShow(false)}
                 className="cursor-pointer absolute top-3 right-3"
@@ -84,7 +84,7 @@ const Pagar = ({ empresa, factura, monto }) => {
               </div>
               <div>
                 <div
-                  className="w-72 flex justify-center bg-blue-800 hover:bg-blue-700 text-white font-bold mt-4 py-2 px-16 rounded focus:outline-none focus:shadow-outline uppercase"
+                  className="w-72 flex justify-center bg-blue-800 hover:bg-blue-700 text-white font-bold mt-4 py-2 px-16 rounded focus:outline-none focus:shadow-outline uppercase sm:w-48"
                   onClick={() => datosForm()}
                 >
                   Pagar
