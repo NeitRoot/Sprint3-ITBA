@@ -25,7 +25,7 @@ const Contacto = () => {
               className="h-[3rem]] w-[3.5rem] mb-3"
             />
           </div>
-          <div className="w-[80%] flex border-2 border-yellow-600 rounded">
+          <div className="w-[80%] flex border-2 border-black rounded">
             <div className="flex p-8 sm:flex-col">
               <div className="flex flex-col p-2">
                 <h3 className="font-bold">
