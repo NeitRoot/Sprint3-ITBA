@@ -32,7 +32,7 @@ const Pagos = () => {
           Aca aparecen los datos:
           <p> Empresa: {datosEmpresa}</p>
           <p> Factura: {datosFactura}</p>
-          <p> Monto: {datosMonto}</p>
+          <p> Monto: ${datosMonto}</p>
         </div>
         <div className=" flex justify-center my-6 text-xl">
           <button
