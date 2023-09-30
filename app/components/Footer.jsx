@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <>
       <footer className="h-32 bg-primary-blue">
-        <div className="flex justify-around items-center pt-5">
-          <div className="text-white text-xl uppercase">
+        <div className="flex justify-around items-center pt-5 sm:flex-col">
+          <div className="text-white text-xl uppercase sm:text-sm">
             <Link
               href={"/terminos"}
               className="flex gap-2 items-center transition-colors hover:text-orange-400 font-semibold"
@@ -29,7 +29,7 @@ const Footer = () => {
               <FaGripLinesVertical /> Contacto
             </Link>
           </div>
-          <div className="text-white flex gap-4 text-4xl">
+          <div className="text-white flex gap-4 text-4xl sm:text-lg sm:mt-2">
             <Link
               href={"https://www.facebook.com"}
               target="blank"
