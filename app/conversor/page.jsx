@@ -3,6 +3,11 @@ import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 import FormConversor from "./FormConversor";
 
+export const metadata = {
+  title: "ITBANK - Conversor",
+  description: "Seccion Conversor de monedas del sitio ITBANK",
+};
+
 // Seccion conversor de monedas
 const Conversor = () => {
   return (

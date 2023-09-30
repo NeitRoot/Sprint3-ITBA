@@ -9,6 +9,11 @@ import { BiTransferAlt } from "react-icons/bi";
 import { BsCalculator, BsCurrencyExchange } from "react-icons/bs";
 import { GiPayMoney } from "react-icons/gi";
 
+export const metadata = {
+  title: "ITBANK - Inicio",
+  description: "Seccion inicio del sitio ITBANK",
+};
+
 // Obtiene los datos de la cuenta n°1
 const fetchCuentas = () => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas/1`, {

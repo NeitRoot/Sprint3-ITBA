@@ -2,6 +2,11 @@ import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 
+export const metadata = {
+  title: "ITBANK - Privacidad",
+  description: "Seccion Privacidad del sitio ITBANK",
+};
+
 // Seccion de privacidad para la pagina
 const Privacidad = () => {
   return (

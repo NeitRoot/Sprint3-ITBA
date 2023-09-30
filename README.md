@@ -2,47 +2,55 @@
 ---
 
 ## Preview
-   ![Imagen](./src/assets/images/imagenreadmeinicio.png) ![Imagen](./src/assets/images/imagenreadiniciosidebar.png)
+   ![Inicio](./app/assets/images/readme/home.png) ![Inicio con Sidebar](./app/assets/images/readme/sidebar.png)
 
 ## Descripción del proyecto
 
-Una vez realizado el Homebanking en react, pasamos el codigo a Next para obtener un mejor rendimiento de la pagina.
+Una vez realizado el Homebanking en React, pasamos el codigo a Next para obtener un mejor rendimiento de la pagina.
+
+## Requisitos para ejecutar el proyecto
+
+  Para poder ejecutar el proyecto es necesario lo siguiente:
+
+  1. Tener instalado Node.js y npm/yarn.
+
+  2. Clonar el repositorio desde Github.
+  
+  3. Ejecutar el comando ***npm install*** / ***yarn install*** para las dependencias.
+
+  4. Ejecutar el comando ***npm run dev*** / ***yarn dev*** para correr el proyecto de forma local.
+
+  5. Abrir en el navegador la ruta ***http://localhost:3000*** para visualizarlo.
 
 ## Características
 
 Algunas de las características del proyecto:
 
 ### - Inicio de sesión y registro:
-   ![Imagen](./app/assets/images/imagenreadmeiniciosesion.png)
-   ![Imagen](./app/assets/images/imagenreadmerregistro.png)
+   ![Inicio de sesion](./app/assets/images/readme/inicio_sesion.png) 
+   ![Registro](./app/assets/images/readme/registro.png)
 
 ### - Cuentas:
-   ![Imagen](./app/assets/images/imagenreadmecuentas.png)   
-
-###   - Conversor de moneda:
-   ![Imagen](./app/assets/images/imagenreadmeconversor.png)
-
-###  - Calculadora de préstamos:
-  ![Imagen](./app/assets/images/imagenreadmeprestamosplaceholder.png)  
-  ![Imagen](./app/assets/images/imagenreadmeprestamos.png)
-
-###  - Transferencias:
-   ![Imagen](./app/assets/images/imagenreadmetransferencias.png)
+   ![Cuentas](./app/assets/images/readme/cuentas.png)   
 
 ###  - Pago de facturas:
-   ![Imagen](./app/assets/images/imagenreadmepagos.png)
-   ![Imagen](./app/assets/images/imagenreadmerealizarunpago.png)
+   ![Pagos](./app/assets/images/readme/pagos.png)
    
+###  - Transferencias:
+   ![Transferencias](./app/assets/images/readme/transferencias.png)
 
-### - Imágenes y texto responsive
- 
+###   - Conversor de moneda:
+   ![Conversor de monedas](./app/assets/images/readme/conversor_moneda.png)
+
+###  - Calculadora de préstamos:
+  ![Calculadora de prestamos](./app/assets/images/readme/simulador_prestamos.png)  
+
 
 ## Tecnologías con las que se desarrolló el proyecto  
 
-*  HTML
-*  CSS
 *  JavaScript
-*  Next
+*  ReactJs
+*  NextJs 13
 
 ## Código para destacar (Funcionalidad del conversor de monedas)
 
@@ -166,15 +174,19 @@ export default function FormConversor() {
 }
 
 ```
+## Observaciones del proyecto
+
+> Los campos y datos en las secciones de "Pagos" y "Transferencias" no se almacenan, al recargar la pagina se reinician.
+
+> Se utiliza el inicio de sesión como pagina principal para ejecutar el proyecto.
 
 
 ## Recursos utilizados
 
-* Font Awesome
-* API ExchangeRate
-* Tailwind
-* Vite
-* Next 13
+* API ExchangeRate (Obtener el valor de las monedas para el conversor)
+* TailwindCSS (Estilos de css)
+* Google Font (Fonts del sitio)
+* MockApi (Generación de usuarios)
 
 ## Integrantes (Grupo 1)
 

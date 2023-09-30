@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/images/logo.png";
 
+export const metadata = {
+  title: "ITBANK - Registro",
+  description: "Seccion Registro del sitio ITBANK",
+};
+
 // Seccion registro de usuario
 const Registro = () => {
   return (

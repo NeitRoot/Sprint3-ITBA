@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
-import Transferencia from "./Tranferencia";
+import Transferencia from "./Transferencia";
 
 // Seccion transferencias
 const Transferencias = () => {
@@ -17,7 +17,7 @@ const Transferencias = () => {
 
   useEffect(() => {
     // Actualizar el array con cada modificacion
-    nuevoDato = {
+    const nuevoDato = {
       transaccion: datoTransaccion,
       cuenta: datoCuenta,
       motivo: datoMotivo,

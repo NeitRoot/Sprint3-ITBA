@@ -4,6 +4,11 @@ import SideBar from "@/app/components/Sidebar";
 import Image from "next/image";
 import Celular from "@/app/assets/images/celular.png";
 
+export const metadata = {
+  title: "ITBANK - Contacto",
+  description: "Seccion Contacto del sitio ITBANK",
+};
+
 // Seccion de contacto
 const Contacto = () => {
   return (

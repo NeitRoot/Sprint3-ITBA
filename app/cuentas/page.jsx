@@ -4,6 +4,11 @@ import SideBar from "@/app/components/Sidebar";
 import Cuentas from "./Cuentas";
 import Tarjetas from "./Tarjetas";
 
+export const metadata = {
+  title: "ITBANK - Cuentas",
+  description: "Seccion cuentas del sitio ITBANK",
+};
+
 // Seccion de cuentas y tarjetas
 export default async function Cuenta() {
   return (

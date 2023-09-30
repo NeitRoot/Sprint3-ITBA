@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/images/logo.png";
 
+export const metadata = {
+  title: "ITBANK - Inicio de sesión",
+  description: "Seccion Inicio de sesión del sitio ITBANK",
+};
+
 // Seccion de inicio de sesion
 export default function Home() {
   return (
