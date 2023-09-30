@@ -2,16 +2,20 @@
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
-const Pagar = ({ empresa, factura, monto }) => {
+const Pagar = ({ factura, empresa, descripcion, vencimiento, monto }) => {
   const [show, setShow] = useState(true);
-  const [inputEmpresa, setInputEmpresa] = useState("");
   const [inputFactura, setInputFactura] = useState("");
+  const [inputEmpresa, setInputEmpresa] = useState("");
+  const [inputDescripcion, setInputDescripcion] = useState("");
+  const [inputVencimiento, setInputVencimiento] = useState("");
   const [inputMonto, setInputMonto] = useState("");
 
-  // Captura datos y oculta el formulario
+  // Captura datos del pago y oculta el formulario
   const datosForm = () => {
-    empresa(inputEmpresa);
     factura(inputFactura);
+    empresa(inputEmpresa);
+    descripcion(inputDescripcion);
+    vencimiento(inputVencimiento);
     monto(inputMonto);
     setShow(false);
   };
@@ -21,6 +25,7 @@ const Pagar = ({ empresa, factura, monto }) => {
       {show ? (
         <section className="absolute top-0 left-0 bottom-0 right-0 mx-auto">
           <div className="w-[100%] flex flex-col items-center justify-center sm:w-full">
+            {/* Formulario */}
             <form className="relative flex flex-col items-center bg-white shadow-md rounded p-8 mx-auto sm:w-[85%]">
               <AiOutlineClose
                 onClick={() => setShow(false)}
@@ -29,9 +34,27 @@ const Pagar = ({ empresa, factura, monto }) => {
               <h2 className="text-2xl font-inter font-bold tracking-wider mt-[1rem] mb-2">
                 REALIZAR UN PAGO
               </h2>
+
+              <div className="mb-6 flex flex-col w-full">
+                <label
+                  className="flex text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="factura"
+                >
+                  N° de Factura
+                </label>
+                <input
+                  className="border-b-2 w-full text-gray-700 leading-tight focus:outline-none"
+                  id="factura"
+                  type="text"
+                  placeholder="FCA-0000000001"
+                  value={inputFactura}
+                  onChange={(e) => setInputFactura(e.target.value)}
+                />
+              </div>
+
               <div className="mb-4 flex flex-col w-full">
                 <label
-                  className="flex text-gray-400 text-sm font-bold mb-2"
+                  className="flex text-gray-700 text-sm font-bold mb-2"
                   htmlFor="cbulogin"
                 >
                   Empresa
@@ -48,32 +71,49 @@ const Pagar = ({ empresa, factura, monto }) => {
 
               <div className="mb-6 flex flex-col w-full">
                 <label
-                  className="flex text-gray-400 text-sm font-bold mb-2"
-                  htmlFor="factura"
+                  className="flex text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="descipcion"
                 >
-                  N° de Factura
+                  Descripción
                 </label>
                 <input
-                  className="border-b-2 w-full  text-gray-700 leading-tight focus:outline-none"
-                  id="factura"
+                  className="border-b-2 w-full text-gray-700 leading-tight focus:outline-none"
+                  id="descipcion"
                   type="text"
-                  placeholder="FCA-0000000001"
-                  value={inputFactura}
-                  onChange={(e) => setInputFactura(e.target.value)}
+                  placeholder="Descripción del pago"
+                  value={inputDescripcion}
+                  onChange={(e) => setInputDescripcion(e.target.value)}
                 />
               </div>
 
               <div className="mb-6 flex flex-col w-full">
                 <label
-                  className="flex text-gray-400 text-sm font-bold mb-2"
+                  className="flex text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="factura"
+                >
+                  Vencimiento
+                </label>
+                <input
+                  className="border-b-2 w-full text-gray-700 leading-tight focus:outline-none"
+                  id="factura"
+                  type="date"
+                  placeholder="Vencimiento"
+                  value={inputVencimiento}
+                  onChange={(e) => setInputVencimiento(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-6 flex flex-col w-full">
+                <label
+                  className="flex text-gray-700 text-sm font-bold mb-2"
                   htmlFor="monto"
                 >
                   Monto a abonar
                 </label>
-                <div className="flex">
-                  <p className=" text-gray-400 mr-1 ">$</p>
+                <div className="flex items-center">
+                  <p className=" text-gray-700 mr-1 ">$</p>
                   <input
-                    className="border-b-2 w-full  text-gray-700 leading-tight focus:outline-none"
+                    className="border-b-2 w-full text-gray-700 leading-tight focus:outline-none"
                     id="monto"
                     type="number"
                     placeholder="0"
@@ -84,7 +124,7 @@ const Pagar = ({ empresa, factura, monto }) => {
               </div>
               <div>
                 <div
-                  className="w-72 flex justify-center bg-blue-800 hover:bg-blue-700 text-white font-bold mt-4 py-2 px-16 rounded focus:outline-none focus:shadow-outline uppercase sm:w-48"
+                  className="w-72 flex justify-center bg-blue-800 hover:bg-blue-700 text-white font-bold mt-4 py-2 px-16 rounded focus:outline-none focus:shadow-outline uppercase sm:w-48 hover:cursor-pointer text-center"
                   onClick={() => datosForm()}
                 >
                   Pagar

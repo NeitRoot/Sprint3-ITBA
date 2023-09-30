@@ -30,6 +30,7 @@ const SideBar = () => {
             />
           </svg>
         </button>
+        {/* Menu sidebar */}
         <div
           className={`${
             open ? "w-80" : "w-0"
@@ -58,6 +59,7 @@ const SideBar = () => {
               </button>
               <Image src={Logo} alt="Logo ITBANK" className="w-24" />
             </div>
+            {/* Links */}
             <div className="py-8 flex flex-col mb-10">
               <Link
                 href={"/inicio"}

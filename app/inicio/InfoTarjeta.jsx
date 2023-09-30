@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 
+// Componente con la info de la tarjeta n°1 para mostrar en inicio
 export default function InfoTarjeta() {
   const [mostrarNum, setMostrarNum] = useState(true);
   const [numeroTarjeta, setNumeroTarjeta] = useState("");

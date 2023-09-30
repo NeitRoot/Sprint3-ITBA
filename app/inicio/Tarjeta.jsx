@@ -1,6 +1,7 @@
 import InfoTarjeta from "./InfoTarjeta";
 import Link from "next/link";
 
+// Componente de la tarjeta en el inicio
 const Tarjeta = () => {
   return (
     <div className="bg-slate-50 w-80 rounded-md my-4 min-h-[10rem] border-l-4 border-slate-700 shadow-md shadow-slate-700">

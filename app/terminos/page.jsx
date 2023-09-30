@@ -2,6 +2,12 @@ import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 
+export const metadata = {
+  title: "ITBANK - Términos",
+  description: "Seccion términos del sitio ITBANK",
+};
+
+// Seccion de terminos y condiciones ficticios
 const Terminos = () => {
   return (
     <>

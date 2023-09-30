@@ -4,6 +4,7 @@ import { CiMenuKebab } from "react-icons/ci";
 import { AiOutlineEye } from "react-icons/ai";
 import Logo from "@/app/assets/images/logo-removebg.png";
 
+// Obtener los datos de las tarjetas disponibles
 const fetchTarjetas = () => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/tarjetas`, {
     next: {
@@ -12,6 +13,7 @@ const fetchTarjetas = () => {
   }).then((res) => res.json());
 };
 
+// Componente con las tarjetas disponibles
 export default async function Tarjetas() {
   const tarjetas = await fetchTarjetas();
 

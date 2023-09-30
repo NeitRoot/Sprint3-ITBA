@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/images/logo.png";
 
+export const metadata = {
+  title: "ITBANK - Inicio de sesión",
+  description: "Seccion Inicio de sesión del sitio ITBANK",
+};
+
+// Seccion de inicio de sesion
 export default function Home() {
   return (
     <>
@@ -18,6 +24,7 @@ export default function Home() {
               INICIAR SESIÓN
             </h2>
           </div>
+          {/* Formulario de inicio de sesion */}
           <form className="flex flex-col items-center bg-white shadow-md rounded p-8 mx-auto sm:w-[95%]">
             <div className="mb-4 flex flex-col w-full">
               <label

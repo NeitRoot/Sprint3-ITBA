@@ -2,6 +2,7 @@ import Image from "next/image";
 import Banner from "@/app/assets/images/banner.png";
 import BannerLg from "@/app/assets/images/bannerUnificado.jpg";
 
+// Componente con los banners del inicio
 const Banners = () => {
   return (
     <div className="flex justify-center py-5">

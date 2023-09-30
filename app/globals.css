@@ -14,7 +14,7 @@ body {
   @apply bg-slate-100;
 }
 
-/* Imagen inicio de sesion */
+/* Imagen inicio de sesion y registro*/
 .imagenInicio {
   min-width: 45%;
   background-image: url(./assets/images/mejor_registro.png);
