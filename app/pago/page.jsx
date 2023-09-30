@@ -1,15 +1,40 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 import Pagar from "./Pagar";
 
+// Seccion Pagos
 const Pagos = () => {
   const [show, setShow] = useState(false);
-  const [datosEmpresa, setDatosEmpresa] = useState("");
-  const [datosFactura, setDatosFactura] = useState("");
-  const [datosMonto, setDatosMonto] = useState("");
+  const [datosFactura, setDatosFactura] = useState("FCC-0000000001");
+  const [datosEmpresa, setDatosEmpresa] = useState("ITBA");
+  const [datosDescripcion, setDatosDescripcion] = useState(
+    "Cuota Full Stack Developer"
+  );
+  const [datosVencimiento, setDatosVencimiento] = useState("2023-09-01");
+  const [datosMonto, setDatosMonto] = useState("40.000");
+  const [datosArray, setDatosArray] = useState([]);
+
+  useEffect(() => {
+    // Actualizar el array con cada modificacion
+    const nuevoDato = {
+      factura: datosFactura,
+      empresa: datosEmpresa,
+      descripcion: datosDescripcion,
+      vencimiento: datosVencimiento,
+      monto: datosMonto,
+    };
+    // Agregar nuevos datos al array
+    setDatosArray([...datosArray, nuevoDato]);
+  }, [
+    datosEmpresa,
+    datosFactura,
+    datosMonto,
+    datosDescripcion,
+    datosVencimiento,
+  ]);
 
   // Funciones para capturar inputs del form
   const empresa = (datoEmpresa) => {
@@ -17,6 +42,12 @@ const Pagos = () => {
   };
   const factura = (datoFactura) => {
     setDatosFactura(datoFactura);
+  };
+  const descripcion = (datoDescripcion) => {
+    setDatosDescripcion(datoDescripcion);
+  };
+  const vencimiento = (datoVencimiento) => {
+    setDatosVencimiento(datoVencimiento);
   };
   const monto = (datoMonto) => {
     setDatosMonto(datoMonto);
@@ -28,12 +59,7 @@ const Pagos = () => {
       <SideBar />
       <section className="relative min-h-[calc(100vh-232px)]">
         <h1 className="flex justify-center my-6 text-4xl">Pagos</h1>
-        <div className="text-center">
-          Aca aparecen los datos:
-          <p> Empresa: {datosEmpresa}</p>
-          <p> Factura: {datosFactura}</p>
-          <p> Monto: {datosMonto}</p>
-        </div>
+        {/* Muestra el formulario para realizar los pagos */}
         <div className=" flex justify-center my-6 text-xl">
           <button
             className="relative bg-orange-400 p-4 rounded-2xl text-white hover:bg-primary-blue transition-colors"
@@ -43,7 +69,13 @@ const Pagos = () => {
             Realizar un pago
           </button>
           {show ? (
-            <Pagar empresa={empresa} factura={factura} monto={monto} />
+            <Pagar
+              factura={factura}
+              empresa={empresa}
+              descripcion={descripcion}
+              vencimiento={vencimiento}
+              monto={monto}
+            />
           ) : null}
         </div>
         <div className=" overflow-x-auto border rounded-md mt-4 mx-auto w-4/5 mb-4">
@@ -55,7 +87,7 @@ const Pagos = () => {
                   N° de factura
                 </th>
                 <th scope="col" className="px-6 py-3 font-extrabold">
-                  Cuenta
+                  Empresa
                 </th>
                 <th scope="col" className="px-6 py-3 bg-gray-50 font-extrabold">
                   Motivo
@@ -68,50 +100,19 @@ const Pagos = () => {
                 </th>
               </tr>
             </thead>
-            {/* Datos */}
+            {/* Mapeado de los datos obtenidos en el array */}
             <tbody>
-              <tr className="border-b border-gray-200 ">
-                <td className="px-6 py-4 font-medium bg-gray-50">
-                  FCC-0000000001
-                </td>
-                <td className="px-6 py-4">ITBA</td>
-                <td className="px-6 py-4 bg-gray-50 ">
-                  Cuota Full Stack Developer
-                </td>
-                <td className="px-6 py-4">15/10/23</td>
-                <td className="px-6 py-4 bg-gray-50 ">$40.000</td>
-              </tr>
-              <tr className="border-b border-gray-200 ">
-                <td className="px-6 py-4 font-medium bg-gray-50">
-                  FCC-0000000002
-                </td>
-                <td className="px-6 py-4">Edenor</td>
-                <td className="px-6 py-4 bg-gray-50 ">Luz mes septiembre</td>
-                <td className="px-6 py-4">30/10/23</td>
-                <td className="px-6 py-4 bg-gray-50">$32.000</td>
-              </tr>
-              <tr className="border-b border-gray-200 ">
-                <td className="px-6 py-4 font-medium bg-gray-50">
-                  FCB-0034521413
-                </td>
-                <td className="px-6 py-4">Adidas</td>
-                <td className="px-6 py-4 bg-gray-50 ">
-                  Cuota n°4 compra #34521413
-                </td>
-                <td className="px-6 py-4">06/11/23</td>
-                <td className="px-6 py-4 bg-gray-50">$17.500</td>
-              </tr>
-              <tr className="border-b border-gray-200 ">
-                <td className="px-6 py-4 font-medium bg-gray-50">
-                  FCC-0000000004
-                </td>
-                <td className="px-6 py-4">ITBA</td>
-                <td className="px-6 py-4 bg-gray-50 ">
-                  Cuota Full Stack Developer
-                </td>
-                <td className="px-6 py-4">15/11/23</td>
-                <td className="px-6 py-4 bg-gray-50">$40.000</td>
-              </tr>
+              {datosArray.map((dato, i) => (
+                <tr key={i} className="border-b border-gray-200">
+                  <th className="px-6 py-4 font-medium bg-gray-50">
+                    {dato.factura}
+                  </th>
+                  <th className="px-6 py-4">{dato.empresa}</th>
+                  <th className="px-6 py-4 bg-gray-50 ">{dato.descripcion}</th>
+                  <td className="px-6 py-4">{dato.vencimiento}</td>
+                  <td className="px-6 py-4 bg-gray-50 ">$ {dato.monto}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

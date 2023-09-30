@@ -4,6 +4,7 @@ import SideBar from "@/app/components/Sidebar";
 import Cuentas from "./Cuentas";
 import Tarjetas from "./Tarjetas";
 
+// Seccion de cuentas y tarjetas
 export default async function Cuenta() {
   return (
     <>

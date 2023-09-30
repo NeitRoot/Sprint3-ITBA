@@ -4,6 +4,7 @@ import SideBar from "@/app/components/Sidebar";
 import Image from "next/image";
 import Celular from "@/app/assets/images/celular.png";
 
+// Seccion de contacto
 const Contacto = () => {
   return (
     <>

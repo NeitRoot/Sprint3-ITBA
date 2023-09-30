@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/images/logo.png";
 
+// Seccion registro de usuario
 const Registro = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Registro = () => {
               REGISTRARSE
             </h2>
           </div>
+          {/* Formulario de registro */}
           <form className="flex flex-col items-center bg-white shadow-md rounded p-8 mx-auto sm:w-[95%]">
             <div className="mb-4 flex flex-col w-full">
               <label

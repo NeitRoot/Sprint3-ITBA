@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// Obtener los datos de las cuentas disponibles
 const fetchCuentas = () => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas`, {
     next: {
@@ -8,6 +9,7 @@ const fetchCuentas = () => {
   }).then((res) => res.json());
 };
 
+// Componente con las cuentas disponibles
 export default async function Cuentas() {
   const cuentas = await fetchCuentas();
   return (

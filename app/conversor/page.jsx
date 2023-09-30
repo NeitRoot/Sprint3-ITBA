@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 import FormConversor from "./FormConversor";
 
+// Seccion conversor de monedas
 const Conversor = () => {
   return (
     <>

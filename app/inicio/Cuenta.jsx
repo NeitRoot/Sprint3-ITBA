@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// Obtener los datos de la cuenta n° 1 para mostrar en inicio
 const fetchCuentas = () => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas/1`, {
     next: {
@@ -8,6 +9,7 @@ const fetchCuentas = () => {
   }).then((res) => res.json());
 };
 
+// Componente con la info de la cuenta n° 1 para mostrar en inicio
 export default async function Cuenta() {
   const cuentas = await fetchCuentas();
 

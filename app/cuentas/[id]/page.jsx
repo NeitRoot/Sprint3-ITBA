@@ -4,6 +4,7 @@ import SideBar from "@/app/components/Sidebar";
 import Link from "next/link";
 import { RiArrowDownSFill, RiArrowLeftSFill } from "react-icons/ri";
 
+// Obtener los datos de la cuenta seleccionada segun el id
 const fetchCuentaSeleccionada = (id) => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas/${id}`, {
     next: {
@@ -12,6 +13,7 @@ const fetchCuentaSeleccionada = (id) => {
   }).then((res) => res.json());
 };
 
+// Muetra la info detallada en la cuenta seleccionada
 export default async function DetalleCuenta({ params }) {
   const { id } = params;
   const cuentas = await fetchCuentaSeleccionada(id);

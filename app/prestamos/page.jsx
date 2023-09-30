@@ -6,6 +6,7 @@ import SideBar from "@/app/components/Sidebar";
 import FormPrestamos from "./FormPrestamos";
 import Resultado from "./Resultado";
 
+// Seccion prestamos
 const Prestamos = () => {
   const [cantidad, setCantidad] = useState(0);
   const [plazo, setPlazo] = useState("3");

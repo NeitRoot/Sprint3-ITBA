@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { HiChevronRight } from "react-icons/hi";
 
+// Formulario del conversor
 export default function FormConversor() {
   const [moneda1, setMoneda1] = useState("USD");
   const [moneda2, setMoneda2] = useState("ARS");
@@ -12,6 +13,7 @@ export default function FormConversor() {
   const [valorMoneda2, setValorMoneda2] = useState(undefined);
   const [resultado, setResultado] = useState(false);
 
+  // Obtener los valores de cada moneda
   useEffect(() => {
     const URL = "https://v6.exchangerate-api.com/v6";
     const API_KEY = "b5161e898c850d8b3be17bf6";
@@ -21,6 +23,7 @@ export default function FormConversor() {
       .then((data) => setListaMonedas(Object.keys(data.conversion_rates)));
   }, [moneda1]);
 
+  // Realiza la conversion
   function handleConvert(e) {
     e.preventDefault();
     if (moneda1 !== moneda2 && montoIngresado !== 0) {
@@ -39,6 +42,7 @@ export default function FormConversor() {
 
   return (
     <>
+      {/* Formulario */}
       <form>
         <div className="flex justify-center items-center gap-4 my-2">
           <select
@@ -95,6 +99,7 @@ export default function FormConversor() {
           </button>
         </div>
       </form>
+      {/* Resultado de la conversion */}
       {resultado === true ? (
         <div className="flex font-semibold m-2 sm:flex-col sm:items-center">
           <span className=" text-red-600 mx-1">

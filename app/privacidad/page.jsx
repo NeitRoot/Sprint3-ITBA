@@ -2,6 +2,7 @@ import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import SideBar from "@/app/components/Sidebar";
 
+// Seccion de privacidad para la pagina
 const Privacidad = () => {
   return (
     <>

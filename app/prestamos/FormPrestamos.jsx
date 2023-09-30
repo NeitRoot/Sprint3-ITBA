@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { calcularTotal } from "@/app/utils/prestamos";
 
+// Componente del Formulario de prestamos
 const Formulario = ({ cantidad, setCantidad, plazo, setPlazo, setTotal }) => {
   const [error, setError] = useState(false);
 

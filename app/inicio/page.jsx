@@ -9,6 +9,7 @@ import { BiTransferAlt } from "react-icons/bi";
 import { BsCalculator, BsCurrencyExchange } from "react-icons/bs";
 import { GiPayMoney } from "react-icons/gi";
 
+// Obtiene los datos de la cuenta n°1
 const fetchCuentas = () => {
   return fetch(`https://651449b58e505cebc2eb14a2.mockapi.io/cuentas/1`, {
     next: {
@@ -16,8 +17,11 @@ const fetchCuentas = () => {
     },
   }).then((res) => res.json());
 };
+
+// Carga dinamica del componente con los banners del inicio
 const Banners = dynamic(() => import("@/app/inicio/Banners"));
 
+// Seccion del inicio
 export default async function Inicio() {
   const cuenta = await fetchCuentas();
 
