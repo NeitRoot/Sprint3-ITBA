@@ -13,7 +13,7 @@ const Terminos = () => {
     <>
       <Header />
       <SideBar />
-      <section className="flex h-screen mt-8 mb-16">
+      <section className="flex h-screen md:mt-4 md:mb-4 ">
         <div className="w-full flex flex-col items-center justify-center ">
           <div className=" flex flex-col items-center">
             <h2 className="text-2xl font-inter font-bold mb-1">

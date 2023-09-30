@@ -13,10 +13,10 @@ const Privacidad = () => {
     <>
       <Header />
       <SideBar />
-      <section className="flex h-screen mt-8 mb-16">
+      <section className="flex h-screen">
         <div className="w-full flex flex-col items-center justify-center">
           <div className=" flex flex-col items-center">
-            <h2 className="text-2xl font-inter font-bold mb-5">
+            <h2 className="text-2xl font-inter font-bold mb-5 md:ml-16">
               Declaración de privacidad y confidencialidad de la información de
               ITBANK
             </h2>
